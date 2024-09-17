@@ -1,4 +1,100 @@
-header{
+* {
+    box-sizing: border-box;
+}
+
+.font {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-2 {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+header, main, nav {
+    padding: 10px;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+footer {
+    padding: 10px;
+    margin: 0px;
     background-color: black;
     color: white;
+}
+
+.main-menu {
+    display: inline;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 75%;
+    margin: 0px, auto;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 22px;
+    color:black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+
+p, li, td, th {
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+}
+
+.Food-plate{
+    height: 300px;
+    width: 500px;
+}
+
+.Food-plate > img{
+    height: 100%;
+    width: 100%;
+}
+
+table {
+    padding: 10px;
+    
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+#contacts {
+    align-items:baseline;
+}
+
+.error {
+    padding: 20px;
+    text-align: center;
+}
+
+.error-link {
+    color: blue;
+    text-decoration: none;
 }
