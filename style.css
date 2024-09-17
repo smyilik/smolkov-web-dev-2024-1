@@ -63,6 +63,14 @@ nav ul {
     padding: 0;
 }
 
+nav {
+    margin: 0px;
+}
+
+figure {
+    margin: 0px;
+}
+
 .Food-plate{
     height: 300px;
     width: 500px;
