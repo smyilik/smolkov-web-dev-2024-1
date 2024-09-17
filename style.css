@@ -15,6 +15,11 @@
   font-style: normal;
 }
 
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
 header, main {
     padding: 10px;
     margin: 20px;
@@ -22,7 +27,7 @@ header, main {
 }
 
 footer {
-    padding: 10px;
+    padding: 5px 23px;
     margin: 0px;
     background-color: black;
     color: white;
@@ -33,10 +38,15 @@ footer {
     margin-right: 20px;
 }
 
-.container {
-    max-width: 75%;
-    margin: 0px, auto;
-    margin-bottom: 40px;
+nav {
+    padding: 10px;
+    margin: 0px;
+}
+
+nav ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0;
 }
 
 a {
@@ -51,21 +61,16 @@ a:hover {
     color: red;
 }
 
+.container {
+    max-width: 75%;
+    margin: 0px, auto;
+    margin-bottom: 40px;
+}
+
 p, li, td, th {
     font-size: 18px;
     text-align: justify;
     margin-bottom: 5px;
-}
-
-nav {
-    padding: 10px;
-    margin: 0px;
-}
-
-nav ul {
-    margin: 0px;
-    list-style: none;
-    padding: 0;
 }
 
 figure {
@@ -84,7 +89,6 @@ figure {
 
 table {
     padding: 10px;
-    
     border-collapse: collapse;
     text-align: left;
 }
