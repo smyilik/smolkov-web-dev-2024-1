@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-header, main, nav {
+header, main {
     padding: 10px;
     margin: 20px;
     margin-left: 50px;
@@ -57,14 +57,15 @@ p, li, td, th {
     margin-bottom: 5px;
 }
 
+nav {
+    padding: 10px;
+    margin: 0px;
+}
+
 nav ul {
     margin: 0px;
     list-style: none;
     padding: 0;
-}
-
-nav {
-    margin: 0px;
 }
 
 figure {
