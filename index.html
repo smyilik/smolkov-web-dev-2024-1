@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Макароллыч</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +14,15 @@
     </head>
     <body>
         <header>
-            <a href="./index.html"><h1 class="font">Макароллыч</h1></a>
+            <div class="restaurant-name">
+                <a href="./index.html"><h1 class="font">Макароллыч</h1></a>
+            </div>
             <nav>
-                <ul class="font-2">
-                    <li class="main-menu"><a href="#about">О нас</a></li>
-                    <li class="main-menu"><a href="./store.html">Собрать ланч</a></li>
-                    <li class="main-menu"><a href="./1.html">Заказы</a></li>
-                    <li class="main-menu"><a href="#contacts">Контакты</a></li>
+                <ul class="main-menu font-2">
+                    <li><a class="active" href="./index.html#about">О нас</a></li>
+                    <li><a href="./store.html">Собрать ланч</a></li>
+                    <li><a href="./1.html">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -93,6 +96,7 @@
                 </table>
             </div>
         </main>
+        <div class="footer-wrap"></div>
         <footer>
             <div class="footer font-2" id="contacts">
                 <p>Позвонить нам +7(000)-000-00-00</p>

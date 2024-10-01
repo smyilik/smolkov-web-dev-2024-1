@@ -2,6 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Макароллыч</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,82 +14,178 @@
     </head>
     <body>
         <header>
-            <a href="./index.html"><h1 class="font">Макароллыч</h1></a>
+            <div class="restaurant-name">
+                <a href="./index.html"><h1 class="font">Макароллыч</h1></a>
+            </div>
             <nav>
-                <ul class="font-2">
-                    <li class="main-menu"><a href="./index.html#about">О нас</a></li>
-                    <li class="main-menu"><a href="./store.html">Собрать ланч</a></li>
-                    <li class="main-menu"><a href="./1.html">Заказы</a></li>
-                    <li class="main-menu"><a href="#contacts">Контакты</a></li>
+                <ul class="main-menu font-2">
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a class="active" href="./store.html">Собрать ланч</a></li>
+                    <li><a href="./1.html">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
             <nav>
-                <ul class="font-2">
-                    <li class="main-menu"><a href="#pasta">Паста</a></li>
-                    <li class="main-menu"><a href="#sushi-rolls">Суши и роллы</a></li>
-                    <li class="main-menu"><a href="#drinks">Напитки</a></li>
+                <ul class="main-menu font-2">
+                    <li><a href="#pasta">Паста</a></li>
+                    <li><a href="#sushi-rolls">Суши и роллы</a></li>
+                    <li><a href="#drinks">Напитки</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="products-list" id="pasta">
+            <section id="pasta">
                 <h2 class="font-2">Паста</h2>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./images/pasta/1_gazpacho.jpg" alt="Газпачо">
-                    </div>
-                    <div class="product-details">
-                        <p class="price font-2">349 &#8381;</p>
-                        <p class="dish-name font-2">Паста-Болоньезе</p>
-                        <p class="dish-weight font-2">200г</p>
-                        <div class="control">
-                            <button class="btn font-2">
-                                <span class="add-to-cart">Добавить</span>
-                            </button>
+                <ul class="products-list">
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/pasta/1_gazpacho.jpg" alt="Газпачо">
                         </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./images/pasta/1_gazpacho.jpg" alt="Газпачо">
-                    </div>
-                    <div class="product-details">
-                        <p class="price font-2">349 &#8381;</p>
-                        <p class="dish-name font-2">Паста-Болоньезе</p>
-                        <p class="dish-weight font-2">200г</p>
-                        <div class="control">
-                            <button class="btn font-2">
-                                <span class="add-to-cart">Добавить</span>
-                            </button>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Паста-Болоньезе</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="./images/pasta/1_gazpacho.jpg" alt="Газпачо">
-                    </div>
-                    <div class="product-details">
-                        <p class="price font-2">349 &#8381;</p>
-                        <p class="dish-name font-2">Паста-Болоньезе</p>
-                        <p class="dish-weight font-2">200г</p>
-                        <div class="control">
-                            <button class="btn font-2">
-                                <span class="add-to-cart">Добавить</span>
-                            </button>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/pasta/2_mushroom_soup.jpg" alt="Грибной суп">
                         </div>
-                    </div>
-                </div>
-                
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Грибной суп</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/pasta/3_norwegian_soup.jpg" alt="Норвежский суп">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Норвежский суп</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
-
-            <section class="products-list" id="sushi-rolls">
+            <section id="sushi-rolls">
                 <h2 class="font-2">Суши и роллы</h2>
+                <ul class="products-list">
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/sushi_rolls/1_chickencutletsandmashedpotatoes.jpg" alt="Куриные котлеты с пюре">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Куриные котлеты с пюре</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/sushi_rolls/2_friedpotatoeswithmushrooms1.jpg" alt="Жаренный картофель с грибами">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Жаренный картофель с грибами, выполненный по старинному рецепту</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/sushi_rolls/3_lasagna.jpg" alt="Лазанья">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Лазанья</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
-
-            <section class="products-list" id="drinks">
+            <section id="drinks">
                 <h2 class="font-2">Напитки</h2>
+                <ul class="products-list">
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/drinks/1_applejuice.jpg" alt="Яблочный сок">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Яблочный сок</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/drinks/2_carrotjuice.jpg" alt="Морковный сок">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Морковный сок</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-image">
+                            <img src="./images/drinks/3_orangejuice.jpg" alt="Апельсиновый сок">
+                        </div>
+                        <div class="product-details">
+                            <p class="price font-2">349 &#8381;</p>
+                            <p class="dish-name font-2">Апельсиновый сок</p>
+                            <p class="dish-weight font-2">200г</p>
+                            <div class="control">
+                                <button class="btn font-2">
+                                    <span class="add-to-cart">Добавить</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </main>
+        <div class="footer-wrap"></div>
         <footer>
             <div class="footer font-2" id="contacts">
                 <p>Позвонить нам +7(000)-000-00-00</p>

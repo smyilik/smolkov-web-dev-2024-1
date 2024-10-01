@@ -18,11 +18,18 @@
 body {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 body > header, main {
     padding: 10px;
     margin: 0 20px 0 50px;
+}
+
+.active {
+    color: tomato;
 }
 
 header a {
@@ -36,13 +43,26 @@ footer {
     color: white;
 }
 
+.footer-wrap {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+}
+
 .main-menu {
-    display: inline;
-    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-menu li {
+    margin-right: 15px;
 }
 
 nav {
-    padding: 10px;
+    padding: 10px 0px;
     margin: 0px;
 }
 
@@ -61,7 +81,7 @@ a {
 }
 
 a:hover {
-    color: red;
+    color: tomato;
 }
 
 .container {
@@ -75,15 +95,14 @@ header {
     text-align: justify;
 }
 
-p, li, td, th {
+p, li {
     font-size: 18px;
-    text-align: justify;
+    text-align: left;
 }
 
 h2 {
     font-size: 22px;
-    text-align: justify;
-    font-weight: bold;
+    text-align: left;
 }
 
 figure {
@@ -107,6 +126,8 @@ table {
 }
 
 th, td {
+    font-size: 18px;
+    text-align: left;
     padding: 5px;
     border: 1px solid black;
 }
@@ -126,52 +147,56 @@ th, td {
 }
 
 .products-list {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
 }
 
 .product-card {
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    height: 1fr;
-    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
     background-color: white;
+    padding: 30px 40px;
     border-radius: 35px;
-    padding: 30px 40px 30px 40px;
-    margin: 10px 10px 0 0;
     filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
 }
 
 .product-image {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    flex-grow: 0;
 }
 
 .product-details {
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .product-image img {
-    /* display: flex; */
     width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 35px;
 }
 
 .control {
-    /* display: flex; */
-    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .btn {
     width: 100%;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 30px;
     border-radius: 10px;
     border: solid 2px lightcoral;
-    color: white;
+    background-color: wheat;
+    color: black;
+    font-size: 18px;
 }
 
 .product-card:hover {
@@ -184,13 +209,65 @@ th, td {
 }
 
 .price, .dish-name {
-    display: flex;
-    margin: 10px 0;
     font-size: 22px;
+    overflow: hidden;
 }
 
 .dish-weight {
-    display: flex;
-    margin: 10px 0;
+    justify-content: flex-end;
     color: gray;
+    margin-top: auto;
+}
+
+@media (max-width: 800px) {
+    .products-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0 15px;
+    }
+
+    .Food-plate {
+        width: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .restaurant-name {
+        text-align: center;
+    }
+
+    .main-menu a {
+        font-size: 26px; 
+    }
+
+    .main-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Food-plate > img {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 16px; 
+    }
+
+    .products-list {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    th, td {
+        font-size: 14px; 
+    }
 }
