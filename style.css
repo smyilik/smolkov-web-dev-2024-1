@@ -20,10 +20,13 @@ body {
     padding: 0px;
 }
 
-header, main {
+body > header, main {
     padding: 10px;
-    margin: 20px;
-    margin-left: 50px;
+    margin: 0 20px 0 50px;
+}
+
+header a {
+    display: inline-block;
 }
 
 footer {
@@ -67,10 +70,20 @@ a:hover {
     margin-bottom: 40px;
 }
 
+header {
+    font-size: 22px;
+    text-align: justify;
+}
+
 p, li, td, th {
     font-size: 18px;
     text-align: justify;
-    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: justify;
+    font-weight: bold;
 }
 
 figure {
@@ -110,4 +123,74 @@ th, td {
 .error-link {
     color: blue;
     text-decoration: none;
+}
+
+.products-list {
+    display: block;
+}
+
+.product-card {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    height: 1fr;
+    width: 33%;
+    background-color: white;
+    border-radius: 35px;
+    padding: 30px 40px 30px 40px;
+    margin: 10px 10px 0 0;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+}
+
+.product-image {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.product-details {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.product-image img {
+    /* display: flex; */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 35px;
+}
+
+.control {
+    /* display: flex; */
+    text-align: center;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    border: solid 2px lightcoral;
+    color: white;
+}
+
+.product-card:hover {
+    border: 2px solid tomato;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #f1eee9;
+}
+
+.price, .dish-name {
+    display: flex;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.dish-weight {
+    display: flex;
+    margin: 10px 0;
+    color: gray;
 }
