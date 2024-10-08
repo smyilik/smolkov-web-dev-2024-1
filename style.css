@@ -219,6 +219,88 @@ th, td {
     margin-top: auto;
 }
 
+
+
+
+
+
+
+
+
+
+.place-order {
+    margin: 20px 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: baseline;
+    font-size: 18px;
+    gap: 20px;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: none;
+}
+
+fieldset > legend {
+    margin-bottom: 10px;
+}
+
+select {
+    font-size: 18px;
+}
+
+fieldset > div > p, label + input[type="checkbox"] {
+    font-size: 14px;
+    margin-top: 5px;
+    color:rgb(128, 124, 124);
+}
+
+fieldset > p {
+    margin: 0;
+}
+
+.news-check {
+    display: flex;
+    flex-direction: row;
+}
+
+.delievery-choice > legend {
+    grid-area: a;
+}
+
+#asap {
+    grid-area: b;
+}
+
+#label[for="asap"] {
+    grid-area: c;
+}
+
+#by-time {
+    grid-area: d;
+}
+
+#label[for="by-time"] {
+    grid-area: e;
+}
+
+
+
 @media (max-width: 800px) {
     .products-list {
         grid-template-columns: repeat(2, 1fr);
