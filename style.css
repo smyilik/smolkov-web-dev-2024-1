@@ -110,13 +110,14 @@ figure {
 }
 
 .Food-plate{
-    height: 300px;
-    width: 500px;
+    max-width: 500px;
+    object-fit: scale-down;
 }
 
 .Food-plate > img{
-    height: 100%;
-    width: 100%;
+    object-fit: scale-down;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 table {
@@ -146,6 +147,11 @@ th, td {
     text-decoration: none;
 }
 
+
+
+
+/* lab 2 */
+
 .products-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -153,6 +159,7 @@ th, td {
 }
 
 .product-card {
+    border: 2px solid transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -174,6 +181,8 @@ th, td {
     flex-direction: column;
     justify-content: space-between;
     flex-grow: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .product-image img {
@@ -224,9 +233,7 @@ th, td {
 
 
 
-
-
-
+/* lab 3 */
 
 .place-order {
     margin: 20px 20px;
@@ -244,7 +251,7 @@ form {
     flex-wrap: wrap;
     align-content: baseline;
     font-size: 18px;
-    gap: 20px;
+    gap: 10rem;
 }
 
 fieldset {
@@ -260,11 +267,15 @@ fieldset > legend {
     margin-bottom: 10px;
 }
 
+input[type="text"], input[type="email"], input[type="tel"], input[type="time"] {
+    width: 100%;
+}
+
 select {
     font-size: 18px;
 }
 
-fieldset > div > p, label + input[type="checkbox"] {
+fieldset > div > p, label[for="news"] {
     font-size: 14px;
     margin-top: 5px;
     color:rgb(128, 124, 124);
@@ -279,27 +290,16 @@ fieldset > p {
     flex-direction: row;
 }
 
-.delievery-choice > legend {
-    grid-area: a;
+.order-btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 7px 15px;
 }
 
-#asap {
-    grid-area: b;
+.order-btn:hover {
+    background-color: lightgray;
 }
-
-#label[for="asap"] {
-    grid-area: c;
-}
-
-#by-time {
-    grid-area: d;
-}
-
-#label[for="by-time"] {
-    grid-area: e;
-}
-
-
 
 @media (max-width: 800px) {
     .products-list {
@@ -313,7 +313,7 @@ fieldset > p {
     }
 
     .Food-plate {
-        width: 500px;
+        max-width: 500px;
     }
 }
 
@@ -329,10 +329,6 @@ fieldset > p {
     .main-menu {
         flex-direction: column;
         align-items: center;
-    }
-
-    .Food-plate > img {
-        width: 100%;
     }
 
     th, td {

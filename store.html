@@ -185,7 +185,6 @@
                 </ul>
             </section>
         </main>
-
         <div class="place-order">
             <h2 class="font-2" id="order">Сделать заказ</h2>
             <form method="POST" action="https://httpbin.org/post">
@@ -193,21 +192,21 @@
                     <legend>Ваш заказ</legend>
                     <label for="soup">Суп</label>
                     <select name="soup" id="soup" required class="font-2">
-                        <option>--Выберите суп--</option>
+                        <option>-- Выберите суп --</option>
                         <option value="1_gazpacho">Газпачо</option>
                         <option value="2_mushroom_soup">Грибной суп</option>
                         <option value="3_norwegian_soup">Норвежский суп</option>
                     </select>
                     <label for="main-dish">Главное блюдо</label>
                     <select name="main-dish" id="main-dish" required class="font-2">
-                        <option>--Выберите главное блюдо--</option>
+                        <option>-- Выберите главное блюдо --</option>
                         <option value="1_chickencutletsandmashedpotatoes">Куриные котлеты</option>
                         <option value="2_friedpotatoeswithmushrooms1">Жаренный картофель</option>
                         <option value="3_lasagna">Лазанья</option>
                     </select>
                     <label for="drink">Напиток</label>
                     <select name="drink" id="drink" required class="font-2">
-                        <option>--Выберите напиток--</option>
+                        <option>-- Выберите напиток --</option>
                         <option value="1_applejuice">Яблочный сок</option>
                         <option value="2_carrotjuice">Морковный сок</option>
                         <option value="3_orangejuice">Апельсиновый сок</option>
@@ -218,18 +217,18 @@
                 <fieldset class="your-data font-2">
                     <legend>Ваши данные</legend>
                     <label for="name">Имя</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" required placeholder="Иван">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" required placeholder="qwert@mail.com">
                     <div class="news-check">
                         <input type="checkbox" name="news" id="news" checked>
                         <label for="news">Получать информацию о скидках и акциях</label>
                     </div>
                     <label for="phone-num">Номер телефона</label>
-                    <input type="tel" name="phone-number" id="phone-num" required>
+                    <input type="tel" name="phone-number" id="phone-num" required placeholder="+71231231212">
                     <label for="address">Адрес доставки</label>
                     <div class="address">
-                        <input type="text" name="address" id="address" required>
+                        <input type="text" name="address" id="address" required placeholder="Ленинский пр-т, 1 к.2, кв. 3">
                         <p class="font-2">Доставка осуществляется только по Москве</p>
                     </div>
                     <p>Время доставки</p>
@@ -241,14 +240,14 @@
                         <input type="radio" name="delievery-choice" id="by-time" value="by-time" required>
                         <label for="by-time">К указанному времени</label>
                     </div>
+                    <label for="delievery-time">Указание время доставки</label>
                     <div>
-                        <label for="delievery-time">Указание время доставки</label>
                         <input type="time" name="delievery-time" id="delievery-time" min="7:00" max="23:00" step="300">
                         <p class="font-2">Доступное время доставки с 7:00 до 23:00</p>
                     </div>
                     <div>
-                        <button type="reset" class="font-2">Сбросить</button>
-                        <button type="submit" class="font-2">Отправить</button>
+                        <button type="reset" class="order-btn font-2">Сбросить</button>
+                        <button type="submit" class="order-btn font-2">Отправить</button>
                     </div>
                 </fieldset>
             </form>
