@@ -143,6 +143,14 @@ fieldset > p {
 }
 /* lab 3 end */
 
+#your-order > * {
+    display: none;
+}
+
+#empty {
+    display: block;
+}
+
 @media (max-width: 800px) {
     .products-list {
         grid-template-columns: repeat(2, 1fr);
