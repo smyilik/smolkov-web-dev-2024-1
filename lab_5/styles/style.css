@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+.font {
+    font-family: "Dela Gothic One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-2 {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body > header, main {
+    padding: 10px;
+    margin: 0 20px 0 50px;
+}
+
+.active {
+    color: tomato;
+}
+
+header a {
+    display: inline-block;
+}
+
+footer {
+    padding: 5px 23px;
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+.footer-wrap {
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-menu li {
+    margin-right: 15px;
+}
+
+nav {
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+nav ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 22px;
+    color:black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: tomato;
+}
+
+header {
+    font-size: 22px;
+    text-align: justify;
+}
+
+p, li {
+    font-size: 18px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: left;
+}
+
+#contacts {
+    align-items:baseline;
+}

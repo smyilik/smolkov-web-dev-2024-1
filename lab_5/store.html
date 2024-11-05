@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Макароллыч</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/styleStore.css">
+    </head>
+    <body>
+        <header>
+            <div class="restaurant-name">
+                <a href="./index.html"><h1 class="font">Макароллыч</h1></a>
+            </div>
+            <nav>
+                <ul class="main-menu font-2">
+                    <li><a href="./index.html#about">О нас</a></li>
+                    <li><a class="active" href="./store.html">Собрать ланч</a></li>
+                    <li><a href="./1.html">Заказы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul class="main-menu font-2">
+                    <li><a href="#pasta">Паста</a></li>
+                    <li><a href="#sushi-rolls">Суши и роллы</a></li>
+                    <li><a href="#salads">Салаты и стартеры</a></li>
+                    <li><a href="#desserts">Десерты</a></li>
+                    <li><a href="#drinks">Напитки</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="pasta">
+                <h2 class="font-2">Паста</h2>
+                <div class="filters">
+                    <input type="radio" id="fishFilterPasta" name="filterPasta" data-kind="fish" data-category="pasta">
+                    <label for="fishFilterPasta">Рыбный</label>
+                    <input type="radio" id="meatFilterPasta" name="filterPasta" data-kind="meat" data-category="pasta">
+                    <label for="meatFilterPasta">Мясной</label>
+                    <input type="radio" id="vegFilterPasta" name="filterPasta" data-kind="veg" data-category="pasta">
+                    <label for="vegFilterPasta">Вегетарианский</label> 
+                </div>
+                <ul class="products-list"></ul>
+            </section>
+            <section id="sushi-rolls">
+                <h2 class="font-2">Суши и роллы</h2>
+                <div class="filters">
+                    <input type="radio" id="fishFilterSushiRoll" name="filterSushiRoll" data-kind="fish" data-category="sushi-roll">
+                    <label for="fishFilterSushiRoll">Рыбное</label>
+                    <input type="radio" id="meatFilterSushiRoll" name="filterSushiRoll" data-kind="meat" data-category="sushi-roll">
+                    <label for="meatFilterSushiRoll">Мясное</label>
+                    <input type="radio" id="vegFilterSushiRoll" name="filterSushiRoll" data-kind="veg" data-category="sushi-roll">
+                    <label for="vegFilterSushiRoll">Вегетарианское</label>
+                </div>
+                <ul class="products-list"></ul>
+            </section>
+            <section id="salads">
+                <h2 class="font-2">Салаты и стартеры</h2>
+                <div class="filters">
+                    <input type="radio" id="fishFilterSalad" name="filterSalad" data-kind="fish" data-category="salad">
+                    <label for="fishFilterSalad">Рыбный</label>
+                    <input type="radio" id="meatFilterSalad" name="filterSalad" data-kind="meat" data-category="salad">
+                    <label for="meatFilterSalad">Мясной</label>
+                    <input type="radio" id="vegFilterSalad" name="filterSalad" data-kind="veg" data-category="salad">
+                    <label for="vegFilterSalad">Вегетарианский</label>   
+                </div>
+                <ul class="products-list"></ul>
+            </section>
+            <section id="desserts">
+                <h2 class="font-2">Десерты</h2>
+                <div class="filters">
+                    <input type="radio" id="smallFilterDessert" name="filterDessert" data-kind="small-dose" data-category="dessert">
+                    <label for="smallFilterDessert">Маленькая порция</label>
+                    <input type="radio" id="mediumFilterDessert" name="filterDessert" data-kind="medium-dose" data-category="dessert">
+                    <label for="mediumFilterDessert">Средняя порция</label>
+                    <input type="radio" id="bigFilterDessert" name="filterDessert" data-kind="big-dose" data-category="dessert">
+                    <label for="bigFilterDessert">Большая порция</label> 
+                </div>
+                <ul class="products-list"></ul>
+            </section>
+            <section id="drinks">
+                <h2 class="font-2">Напитки</h2>
+                <div class="filters">
+                    <input type="radio" id="coldFilterDrink" name="filterDrink" data-kind="cold" data-category="drink">
+                    <label for="coldFilterDrink">Холодный</label>
+                    <input type="radio" id="hotFilterDrink" name="filterDrink" data-kind="hot" data-category="drink">
+                    <label for="hotFilterDrink">Горячий</label>
+                </div>
+                <ul class="products-list"></ul>
+            </section>
+        </main>
+        <div class="place-order">
+            <h2 class="font-2" id="order">Сделать заказ</h2>
+            <form method="POST" action="https://httpbin.org/post">
+                <fieldset id="your-order" class="font-2">
+                    <legend id="orderHeader">Ваш заказ</legend>
+                    <p id="empty"><b>Ничего не выбрано</b></p>
+                    <p id="orderPasta" class="font-2">-- Выберите пасту --</p>
+                    <input type="hidden" name="pasta" id="hiddenPasta">
+
+                    <p id="orderSushiRoll" class="font-2">-- Выберите основное блюдо --</p>
+                    <input type="hidden" name="sushiRoll" id="hiddenSushiRoll">
+
+                    <p id="orderSalad" class="font-2">-- Выберите салат или стартер --</p>
+                    <input type="hidden" name="salad" id="hiddenSalad">
+
+                    <p id="orderDessert" class="font-2">-- Выберите десерт --</p>
+                    <input type="hidden" name="dessert" id="hiddenDessert">
+
+                    <p id="orderDrink" class="font-2">-- Выберите напиток --</p>
+                    <input type="hidden" name="drink" id="hiddenDrink">
+                    <p id="totalPrice" class="font-2">base</p>
+
+                    <label id="orderCommentLabel" for="orderComment">Коментарий к заказу</label>
+                    <textarea name="orderComment" id="orderComment" cols="20" rows="10"></textarea>
+                </fieldset>
+                <fieldset class="your-data font-2">
+                    <legend>Ваши данные</legend>
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" required placeholder="Иван">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="qwert@mail.com">
+                    <div class="news-check">
+                        <input type="checkbox" name="news" id="news" checked>
+                        <label for="news">Получать информацию о скидках и акциях</label>
+                    </div>
+                    <label for="phone-num">Номер телефона</label>
+                    <input type="tel" name="phone-number" id="phone-num" required placeholder="+71231231212">
+                    <label for="address">Адрес доставки</label>
+                    <div class="address">
+                        <input type="text" name="address" id="address" required placeholder="Ленинский пр-т, 1 к.2, кв. 3">
+                        <p class="font-2">Доставка осуществляется только по Москве</p>
+                    </div>
+                    <p>Время доставки</p>
+                    <div>
+                        <input type="radio" name="delievery-choice" id="asap" value="asap" checked required>
+                        <label for="asap">Как можно скорее</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="delievery-choice" id="by-time" value="by-time" required>
+                        <label for="by-time">К указанному времени</label>
+                    </div>
+                    <label for="delievery-time">Указание время доставки</label>
+                    <div>
+                        <input type="time" name="delievery-time" id="delievery-time" min="07:00" max="23:00" step="300">
+                        <p class="font-2">Доступное время доставки с 7:00 до 23:00</p>
+                    </div>
+                    <div>
+                        <button id="reset" type="reset" class="order-btn font-2">Сбросить</button>
+                        <button id="submit type="submit" class="order-btn font-2">Отправить</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer-wrap"></div>
+        <footer>
+            <div class="footer font-2" id="contacts">
+                <p>Позвонить нам +7(000)-000-00-00</p>
+            </div>
+        </footer>
+    </body>
+    <script src="./scripts/menu.js"></script>
+    <script src="./scripts/storeScript.js"></script>
+</html>

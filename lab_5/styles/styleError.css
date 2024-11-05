@@ -1,0 +1,9 @@
+.error {
+    padding: 20px;
+    text-align: center;
+}
+
+.error-link {
+    color: blue;
+    text-decoration: none;
+}
