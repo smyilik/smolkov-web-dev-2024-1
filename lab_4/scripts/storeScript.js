@@ -8,16 +8,16 @@ function totalPrice() {
     const totalPrice = document.getElementById('totalPrice');
     let total = 0;
 
-    if (order.selSoup) {
+    if (order.pasta) {
         total += order.pasta.price;
     }
-    if (order.selMaindish) {
+    if (order.sushiRoll) {
         total += order.sushiRoll.price;
     }
-    if (order.selDrink) {
+    if (order.drink) {
         total += order.drink.price;
     }
-    totalPrice.textContent = `Стоимость заказа: ${total}₽`;
+    totalPrice.textContent = `Стоимость заказа: ${total} ₽`;
 }
 
 function updateShown() {
@@ -49,25 +49,27 @@ function updateShown() {
 }
 
 function selectProduct(keyword) {
-  
-    const product = menu.find(menu => menu.keyword === keyword);
-    switch (product.category) {
-    case 'pasta':
-        order.pasta = product;
-        document.getElementById("orderPasta").textContent =
-        product.name + ' - ' + product.price + '₽';
-        break;
-    case 'sushi-rolls':
-        order.sushiRoll = product;
-        document.getElementById("orderSushiRoll").textContent =
-        product.name + ' - ' + product.price + '₽';
-        break;
-    case 'drinks':
-        order.drink = product;
-        document.getElementById("orderDrink").textContent =
-        product.name + ' - ' + product.price + '₽';
-        break;
-    }
+    menu.forEach(product => {
+        if (product.keyword === keyword) {
+            switch (product.category) {
+            case 'pasta':
+                order.pasta = product;
+                document.getElementById("orderPasta").textContent =
+                product.name + ' - ' + product.price + '₽';
+                break;
+            case 'sushi-rolls':
+                order.sushiRoll = product;
+                document.getElementById("orderSushiRoll").textContent =
+                product.name + ' - ' + product.price + '₽';
+                break;
+            case 'drinks':
+                order.drink = product;
+                document.getElementById("orderDrink").textContent =
+                product.name + ' - ' + product.price + '₽';
+                break;
+            }
+        }
+    });
     updateShown();
 }
 
@@ -79,21 +81,44 @@ function showProducts() {
         const productCard = document.createElement('li');
         productCard.classList.add('product-card');
         productCard.setAttribute('data-product', product.keyword);
-        productCard.innerHTML = `
-            <div class="product-image">
-                <img src="${product.image}" alt="${product.name}">
-            </div>
-            <div class="product-details">
-                <p class="price font-2">${product.price} &#8381;</p>
-                <p class="dish-name font-2">${product.name}</p>
-                <p class="dish-weight font-2">${product.count}</p>
-                <div class="control">
-                    <button class="btn font-2">
-                        <span class="add-to-cart">Добавить</span>
-                    </button>
-                </div>
-            </div>
-        `;
+
+        const image = document.createElement('img');
+        image.src = product.image;
+        image.alt = product.name;
+        productCard.appendChild(image);
+        
+        const price = document.createElement('p');
+        price.classList.add('price');
+        price.classList.add('font-2');
+        price.textContent = `${product.price} ₽`;
+        productCard.appendChild(price);
+
+        const name = document.createElement('p');
+        name.classList.add('dish-name');
+        name.classList.add('font-2');
+        name.textContent = product.name;
+        productCard.appendChild(name);
+
+        const weight = document.createElement('p');
+        weight.classList.add('dish-weight');
+        weight.classList.add('font-2');
+        weight.textContent = product.weight;
+        productCard.appendChild(weight);
+
+        const span = document.createElement('span');
+        span.classList.add('add-to-cart');
+        span.textContent = 'Добавить';
+        const button = document.createElement('button');
+        button.appendChild(span);
+        button.classList.add('btn');
+        button.classList.add('font-2');
+        const control = document.createElement('div');
+        control.appendChild(button);
+        control.classList.add('control');
+        productCard.appendChild(control);
+        
+        button.onclick = () => selectProduct(product.keyword);
+        
         switch (product.category) {
         case 'pasta':
             productSections[0].append(productCard);
@@ -105,8 +130,6 @@ function showProducts() {
             productSections[2].append(productCard);
             break;
         }
-        productCard.querySelector('button').onclick = () =>
-            selectProduct(productCard.getAttribute('data-product'));
     });
 }
 
@@ -119,17 +142,17 @@ document.getElementById('reset').onclick = function() {
     updateShown();
 };
 
-document.getElementById('submit').onclick = function(event) {
+document.getElementById('submit').onclick = function() {
     const pastaValue = document.getElementById('hiddenPasta');
     const sushiRollValue = document.getElementById('hiddenSushiRoll');
     const drinkValue = document.getElementById('hiddenDrink');
     if (order.pasta) {
-        soupValue.value = order.selSoup.keyword;
+        pastaValue.value = order.pasta.keyword;
     }
     if (order.sushiRoll) {
-        mainValue.value = order.selMaindish.keyword;
+        sushiRollValue.value = order.sushiRoll.keyword;
     }
     if (order.drink) {
-        drinkValue.value = order.selDrink.keyword;
+        drinkValue.value = order.drink.keyword;
     }
 };
